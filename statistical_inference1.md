@@ -26,7 +26,7 @@ sapply(results[4:6], mean)
 ```
 
 ```
-## [1] 5.025 4.991 4.999
+## [1] 4.972 5.001 4.989
 ```
 
 The theoritical center of the distribution is `1/lambda = 1/0.2 = 5` which is the mean of the exponential distribution with rate equals to *lambda*. The calculated values through simulation are very close to the theoretical value.
@@ -41,7 +41,7 @@ sapply(results[4:6], var)
 ```
 
 ```
-## [1] 0.6025 0.6384 0.6270
+## [1] 0.6438 0.6076 0.6338
 ```
 
 According to the simulation parameters the theoretical variance of the 40 exponential(0.2)s average is equal to the variance (second power of standard deviation) of the exponential(0.2) distribution divided by the number of samples used for averaging: `1/lambda^2/40 = 0.625'. The calculated values through simulation are very close to the theoretical value.
@@ -102,7 +102,7 @@ resl <- sapply(lamvals, function(lam) {
 ![plot of chunk coverage1_plot](./statistical_inference1_files/figure-html/coverage1_plot.png) 
 
 ```
-## [1] 94 96
+## [1] 92.8 95.0
 ```
 To further investigate the coverage of the confidence interval the same analysis is performed for using different number of samples for average (from 15 to 120 with step 5). The code is not presented but is similar to the previous analysis while the incremental variable is not lambda but m.
 
@@ -114,5 +114,5 @@ resm[,mvals == 40] # Values for our case (m = 40)
 ```
 
 ```
-## [1] 92.7 95.2
+## [1] 91.5 94.6
 ```
